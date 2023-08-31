@@ -1,7 +1,8 @@
 # Qr Code Scanner And Reader App for Android
-Generate and save QR codes in real-time with this simple Android application.
+Scan, Generate and save QR codes in real-time with this simple Android application.
 
 ## Features
+- :book: **Quickly Scan QR Code**: Scan Your QR Code And See The Result!
 - 📲 **Real-time QR Code Generation**: Instantly see the QR code as you type.
 - 📥 **Save to Gallery**: One-click to save the QR code to your device.
 - 📋 **Multiple QR Code Types**: Generate QR codes for phone numbers, Wi-Fi credentials, and websites.
