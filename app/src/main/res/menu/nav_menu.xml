@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+        <item
+            android:id="@+id/nav_result"
+            android:title="Result"
+            android:icon="@drawable/baseline_done_24"
+            />
+        <item
+            android:id="@+id/nav_create"
+            android:title="Create Qr Code"
+            android:icon="@drawable/baseline_create_2"
+            />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="Select Qr Code From Gallery"
+            android:icon="@drawable/baseline_photo_size_select_large_24"
+
+            />
+
+</menu>
