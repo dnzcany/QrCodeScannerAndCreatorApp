@@ -11,6 +11,7 @@ import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import com.denobaba.qrcodescannerv2.databinding.ActivityCreateQrCodeBinding
 import com.denobaba.qrcodescannerv2.databinding.ActivityQrCodeFromGalleryBinding
@@ -23,6 +24,8 @@ import java.util.*
 class CreateQrCode : AppCompatActivity() {
     private lateinit var binding: ActivityCreateQrCodeBinding
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_create_qr_code)
@@ -33,11 +36,7 @@ class CreateQrCode : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Create"
 
-        binding.phone.setOnClickListener {
-            val intent = Intent(this@CreateQrCode,PhoneCreate::class.java)
-            startActivity(intent)
-        }
-
+        binding.download.visibility = View.INVISIBLE
 
 
 
@@ -46,10 +45,15 @@ class CreateQrCode : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 val text = s?.toString() ?: return
                 if (text.isNotEmpty()) {
+                    binding.download.visibility = View.VISIBLE
                     val bitmap = generateQRCode(text)
                     binding.animationView.setImageBitmap(bitmap)
+                    binding.animationView.pauseAnimation()
+
                 } else {
-                    binding.animationView.setImageBitmap(null) // Clear the ImageView if the text is empty
+                    binding.download.visibility = View.INVISIBLE
+                    binding.animationView.setAnimation(R.raw.qrr) // Lottie animasyonunu tekrar ayarlayın
+                    binding.animationView.playAnimation() // Lot
                 }
             }
 
@@ -59,6 +63,12 @@ class CreateQrCode : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             }
         })
+
+
+        binding.phone.setOnClickListener {
+            val intent = Intent(this@CreateQrCode,PhoneCreate::class.java)
+            startActivity(intent)
+        }
 
         binding.download.setOnClickListener {
             val bitmap = (binding.animationView.drawable as BitmapDrawable).bitmap
