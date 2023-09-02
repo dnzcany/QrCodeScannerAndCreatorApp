@@ -27,6 +27,8 @@ class PhoneCreate : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        supportActionBar?.title = "Phone QR"
+
         val qrheree = findViewById<ImageView>(R.id.qrhere)
         qrheree.visibility = View.INVISIBLE
 
