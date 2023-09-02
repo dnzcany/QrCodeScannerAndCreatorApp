@@ -1,4 +1,4 @@
-# Qr Code Scanner And Reader App for Android
+# Qr Code Scanner And Creator App for Android
 Scan, Generate and save QR codes in real-time with this simple Android application.
 
 ## Features
