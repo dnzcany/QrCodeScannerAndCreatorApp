@@ -1,4 +1,6 @@
 # Qr Code Scanner And Creator App for Android
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/cwtofs2.png)
+
 Scan, Generate and save QR codes in real-time with this simple Android application.
 
 ## Features
